@@ -58,6 +58,7 @@ $(document).ready(function() {
           var infowindow = new google.maps.InfoWindow({
             content: content
           });
+          console.log(data[i].common_name);
           // var dataObj = JSON.parse(data);
           // console.log(dataObj);
           var marker = new google.maps.Marker({
