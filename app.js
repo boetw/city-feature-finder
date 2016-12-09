@@ -14,10 +14,8 @@ $(document).ready(function() {
     method: "GET",
     datatype: "json",
     data: {
-        "$order" : "fremont_bridge_nb DESC, fremont_bridge_sb DESC",
-      "$where" : "fremont_bridge_nb IS NOT NULL AND fremont_bridge_sb IS NOT NULL",
-      "$limit" : 1,
-      "$$app_token" : "Y79BdJhSUWsv9mJb3sYCZzESP"
+       "$where" : "city_feature = parks",
+       "$$app_token" : "Y79BdJhSUWsv9mJb3sYCZzESP"
     }
   }).done(function(data) {
     // Construct a flyout
