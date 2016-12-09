@@ -4,7 +4,7 @@ $(document).ready(function() {
  var mapOptions = {
    zoom: 15,
    center: center,
-   draggable: false
+   draggable: true
  };
  
  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
@@ -19,10 +19,11 @@ $(document).ready(function() {
  }).done(function(data) {
    // Construct a flyout
    console.log(data.length);
+   for (var i = 0; i<data.length; i++){
    var content = '<div class="flyout">' + '<ul>' 
-       + '<li><em>Name:</em> ' + data[0].common_name + '</li>' 
-       + '<li><em>Website:</em> ' + data[0].website + '</li>' 
-       + '<li><em>Address:</em> ' + data[0].address + '</li>' 
+       + '<li><em>Name:</em> ' + data[i].common_name + '</li>' 
+       + '<li><em><a href="'+ data[i].website +'" target="_blank">Website</a></em></li>' 
+       + '<li><em>Address:</em> ' + data[i].address + '</li>' 
        + '</ul>' + '</div>';
 
    var infowindow = new google.maps.InfoWindow({
@@ -31,13 +32,14 @@ $(document).ready(function() {
    // var dataObj = JSON.parse(data);
    // console.log(dataObj);
    var marker = new google.maps.Marker({
-     position: new google.maps.LatLng(data[0].latitude, data[0].longitude),
+     position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
      map: map,
-     title: "Fremont Bridge"
-   });
+     title: data[i].common_name
+   }
+   );
    
    google.maps.event.addListener(marker, 'click', function() {
        infowindow.open(map, marker);
        });
- });
+ }});
 });
