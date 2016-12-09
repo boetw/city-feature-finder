@@ -1,6 +1,6 @@
 $(document).ready(function() {
    // Intialize our map
- var center = new google.maps.LatLng(47.580237, -122.382218);
+ var center = new google.maps.LatLng(47.607417,-122.335864);
  var mapOptions = {
    zoom: 15,
    center: center,
