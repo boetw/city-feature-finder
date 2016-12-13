@@ -8,36 +8,27 @@ $(document).ready(function() {
   };
   var markersArray = [];
   var map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-  // function setMapOnAll(map) {
-  //   for (var i = 0; i < markersArray.length; i++) {
-  //     marker[i].setMap(map);
-  //   }
-  //   console.log("markersArray.length "+markersArray.length);
-  // }
-
-  // function clearMarkers() {
-  //   setMapOnAll(null);
-  //   console.log('nullified');
-  // }
+  var selected = [];
 
   document.getElementById('dropdown').addEventListener('change', function() {
     var marker;
     var selectedFeature = document.getElementById('dropdown').value
-    console.log(selectedFeature);
-    // if (selectedFeature === "clear") {
-      console.log('stuffed');
+    if (selectedFeature === "clear") {
+      selected.forEach(function (item) {
+        document.getElementById(item).removeAttribute("style");
+        document.getElementById(item).disabled=false;
+      }
+        );
+      selected = [];
     for (var i = 0; i < markersArray.length; i++) {
-      console.log("markersArray.length "+ markersArray.length);
-      console.log(markersArray[i]);
       markersArray[i].setMap(null);
     }
-    console.log("markersArray.length "+ markersArray.length);
-          console.log('nullified');
-        
         markers = [];
       
-    // } else {
+    } else {
+      document.getElementById(selectedFeature).style.background="lightgray";
+      document.getElementById(selectedFeature).disabled=true;
+      selected.push(selectedFeature);
       $.ajax({
         url: "https://data.seattle.gov/resource/3c4b-gdxv.json",
         method: "GET",
@@ -47,18 +38,16 @@ $(document).ready(function() {
         }
       }).done(function(data) {
         // Construct a flyout
-        console.log(data.length);
         for (var i = 0; i < data.length; i++) {
           var content = '<div class="flyout">' + '<ul>' + '<li><em>Name:</em> ' + data[i].common_name + '</li>' + '<li><em><a href="' + data[i].website + '" target="_blank">Website</a></em></li>' + '<li><em>Address:</em> ' + data[i].address + '</li>' + '</ul>' + '</div>';
           var infowindow = new google.maps.InfoWindow({
             content: content
           });
-          // var dataObj = JSON.parse(data);
-          // console.log(dataObj);
           marker = new google.maps.Marker({
             position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
             map: map,
-            title: data[i].common_name
+            title: data[i].city_feature,
+            animation: google.maps.Animation.DROP,
           });
           markersArray.push(marker);
         }
@@ -67,6 +56,6 @@ $(document).ready(function() {
           infowindow.open(map, marker);
         });
       });
-    // };
+    };
   });
 });
