@@ -63,6 +63,11 @@
   border-radius: 150% 150% 00% 0;
   width: 8%;
   height: 3%;
+  	cursor: pointer;
+
+}
+#about  :hover{
+	cursor: pointer;
 }
 
 @media screen {
