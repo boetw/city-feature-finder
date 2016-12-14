@@ -43,10 +43,24 @@ body {
   background: #5D9732;
   margin: 1% 2% auto;
   text-align: center;
-  border-radius: 0% 0% 100% 100%;
+  border-radius: 0% 0% 0% 0%;
   font-size: 110%;  /* box-shadow: 0px 0px 10px red; */
   word-wrap: break-word;
   height: 50px;
+  line-height: 50px;
+	cursor: pointer;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+     -khtml-user-select: none; /* Konqueror */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none;
+}
+.selectPlace span{
+	line-height: normal;
+}
+.selectPlace :hover{
+	cursor: pointer;
 }
 
 #clear {
