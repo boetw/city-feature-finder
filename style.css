@@ -55,7 +55,7 @@ body {
 
 @media screen and (max-width:800px) {
 	#map{
-		height: 50%;
+		height: 45%;
 	}
 	#menu {
 		width: 100%;
