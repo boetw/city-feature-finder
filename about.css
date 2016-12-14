@@ -33,13 +33,26 @@
     top: 0;
     right: 25px;
     font-size: 36px;
+    color: #ffffff;
+    text-decoration: none;
     margin-left: 50px;
+
 }
+
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
     padding: 20px;
+}
+#about{
+	position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+
+  text-align: center;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Groopie</title>
+    <title>Feature Finder</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
@@ -9,24 +9,18 @@
     <link href='about.css' rel='stylesheet' type='text/css'>
   </head>
   <body>
-  <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-<div id="infoText">
-          <h1 >Your interests mapped all in one place!</h1>
-          <p >What would you like to find today?</p>
-          <p><strong>With Groopie you can easily populate a map with all of your interests!</strong> Before Groopie you had to chart your own map. Individually having to either remember or create your own pins to find your varied interests in one spot. Now living in Seattle 2016, where the future is here. You no longer need to be a cartographer, because we’ll do all the dirty work for you. Want to find a park with basketball courts and wading pools? We got you. We’re the gang, and we look out for you.</p>
-        </div>
-</div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><div>&times;</div></a>
+      <div id="infoText">
+        <h1 >Your interests mapped all in one place!</h1>
+        <p >What would you like to find today?</p>
+        <p>Feature Finder makes is easy to find city maintained facilities near you. Find a variety of features in various parks throughout Seattle, plus other features to better enjoy your city.</p>
+        <p>Make use of your free city features.</p>
+      </div>
+    </div>
     <div id="map"></div>
     <div class="contain">
-      <!-- <div id= "aboutPanel">
-        <div id="infoText">
-          <h1 >Your interests mapped all in one place!</h1>
-          <p >What would you like to find today?</p>
-          <p><strong>With Groopie you can easily populate a map with all of your interests!</strong> Before Groopie you had to chart your own map. Individually having to either remember or create your own pins to find your varied interests in one spot. Now living in Seattle 2016, where the future is here. You no longer need to be a cartographer, because we’ll do all the dirty work for you. Want to find a park with basketball courts and wading pools? We got you. We’re the gang, and we look out for you.</p>
-        </div>
-        <div id="about">About Page</div>
-      </div> --><span onclick="openNav()">About</span>
+
       <div  id="menu">
         <div id="select">Select What You Are Looking For</div>
         <div class="selectPlace" id="Off Leash Areas" value="Off Leash Areas">Off Leash Dog Areas</div>
@@ -44,7 +38,9 @@
         <div class="selectPlace" id="Environmental Learning  Centers" value="Environmental Learning  Centers">Environmental Learning  Centers</div>
         <div class="selectPlace" id="General Attractions" value="General Attractions">General Attractions</div>
         <div class="selectPlace" id="clear" value="clear">Clear Map</div>
+
       </div>
+      <div onclick="openNav()" id="about">About This Site</div>
     </div>
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

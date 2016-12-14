@@ -20,7 +20,7 @@ body {
 
 #menu {
   display: inline;
-  height: 60%;
+  /* height: 60%; */
   width: 90%;
   background: white;
   float: right;
