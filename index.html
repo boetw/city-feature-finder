@@ -1,57 +1,42 @@
 <html>
-    <head>
-        <title>Groopie</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <link href='style.css' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-
-        <div id="map"></div>
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-lg-8 col-lg-offset-2">
-
-                  <h1 class="text-center">Your interests mapped all in one place!</h1>
-
-                  <p class="lead">What would you like to find today?</p>
-
-                  <select multiple class="center-block form-control" id="dropdown">
-                   <option value="" selected>Select Your Interests</option>
-                   <!-- <option value="Parks">Parks</option> -->
-                   <option class="selectPlace" id="Off Leash Areas" value="Off Leash Areas">Off Leash Dog Areas</option>
-                   <option class="selectPlace" id="Basketball Courts" value="Basketball Courts">Basketball Courts</option>
-                   <option class="selectPlace" id="Tennis Courts" value="Tennis Courts">Tennis Courts</option>
-                   <option class="selectPlace" id="Beaches" value="Beaches">Beaches</option>
-                   <option class="selectPlace" id="Pools" value="Pools">Pools</option>
-                   <option class="selectPlace" id="Wading Pool" value="Wading Pools">Wading Pools</option>
-                   <option class="selectPlace" id="Childrens Play Areas" value="Childrens Play Areas">Childrens Play Areas</option>
-                   <option class="selectPlace" id="Playfields" value="Playfields">Playfields</option>
-                   <option class="selectPlace" id="Boat Launches" value="Boat Launches">Boat Launches</option>
-                   <option class="selectPlace" id="Picnic Sites" value="Picnic Sites">Picnic Sites</option>
-                   <option class="selectPlace" id="Firepits" value="Firepits">Firepits</option>
-                   <option class="selectPlace" id="Fishing" value="Fishing">Fishing</option>
-                   <option class="selectPlace" id="Environmental Learning  Centers" value="Environmental Learning  Centers">Environmental Learning  Centers</option>
-                   <option id="clear" value="clear">Clear Map</option>
-
-                 </select>
-                  <br>
-                 <p><strong>With Groopie you can easily populate a map with all of your interests!</strong> Before Groopie you had to chart your own map. Individually having to either remember or create your own pins to find your varied interests in one spot. Now living in Seattle 2016, where the future is here. You no longer need to be a cartographer, because we’ll do all the dirty work for you. Want to find a park with basketball courts and wading pools? We got you. We’re the gang, and we look out for you.</p>
-                </div>
-
-            </div> 
-
-        </div> 
-
-
-        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_dYJco5wlQtCPP8bwbAD3i48Os6_Ltbc"></script>
-        <script src="app.js"></script>
-        
-    </body>
+  <head>
+    <title>Groopie</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='style.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="contain">
+      <!-- <div class="infoText">
+        <h1 >Your interests mapped all in one place!</h1>
+        <p >What would you like to find today?</p>
+        <p><strong>With Groopie you can easily populate a map with all of your interests!</strong> Before Groopie you had to chart your own map. Individually having to either remember or create your own pins to find your varied interests in one spot. Now living in Seattle 2016, where the future is here. You no longer need to be a cartographer, because we’ll do all the dirty work for you. Want to find a park with basketball courts and wading pools? We got you. We’re the gang, and we look out for you.</p>
+      </div> -->
+      <div  id="menu">
+        <div id="select">Select What You Are Looking For</div>
+        <div class="selectPlace" id="Off Leash Areas" value="Off Leash Areas">Off Leash Dog Areas</div>
+        <div class="selectPlace" id="Basketball Courts" value="Basketball Courts">Basketball Courts</div>
+        <div class="selectPlace" id="Tennis Courts" value="Tennis Courts">Tennis Courts</div>
+        <div class="selectPlace" id="Beaches" value="Beaches">Beaches</div>
+        <div class="selectPlace" id="Pools" value="Pools">Pools</div>
+        <div class="selectPlace" id="Wading Pool" value="Wading Pools">Wading Pools</div>
+        <div class="selectPlace" id="Childrens Play Areas" value="Childrens Play Areas">Childrens Play Areas</div>
+        <div class="selectPlace" id="Playfields" value="Playfields">Playfields</div>
+        <div class="selectPlace" id="Boat Launches" value="Boat Launches">Boat Launches</div>
+        <div class="selectPlace" id="Picnic Sites" value="Picnic Sites">Picnic Sites</div>
+        <div class="selectPlace" id="Firepits" value="Firepits">Firepits</div>
+        <div class="selectPlace" id="Fishing" value="Fishing">Fishing</div>
+        <div class="selectPlace" id="Environmental Learning  Centers" value="Environmental Learning  Centers">Environmental Learning  Centers</div>
+        <div class="selectPlace" id="General Attractions" value="General Attractions">General Attractions</div>
+        <div class="selectPlace" id="clear" value="clear">Clear Map</div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrKLAeSAy-OljbVm_R3CwqGFT_uFPhOmQ"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
