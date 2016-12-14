@@ -21,19 +21,15 @@ $(document).ready(function() {
     var marker;
     var elem = e.target;
     var selectedFeature = elem.id;
-    console.log("selectedFeature " + selectedFeature+elem.style.background);
     if (elem.style.background === "red") {
-      console.dir(markersArray);
-      for(var i = 0; i < markersArray.length; i++){
-        console.dir(markersArray[i].visible);
-        if( selectedFeature === markersArray[i].type){
+      for (var i = 0; i < markersArray.length; i++) {
+        if (selectedFeature === markersArray[i].type) {
           markersArray[i].visible = false;
           markersArray[i].setMap(map);
         }
       };
       document.getElementById(selectedFeature).removeAttribute("style");
-    }
-    else if (selectedFeature === "clear") {
+    } else if (selectedFeature === "clear") {
       selected.forEach(function(selectedFeature) {
         document.getElementById(selectedFeature).removeAttribute("style");
         document.getElementById(selectedFeature).disabled = false;
@@ -43,9 +39,9 @@ $(document).ready(function() {
         markersArray[i].setMap(null);
       }
       markers = [];
-    }
-    else {
+    } else {
       document.getElementById(selectedFeature).style.background = "red";
+      document.getElementById(selectedFeature).style.boxShadow = "0px 0px 10px red";
       document.getElementById(selectedFeature).disabled = true;
       selected.push(selectedFeature);
       $.ajax({
@@ -66,9 +62,8 @@ $(document).ready(function() {
             position: new google.maps.LatLng(data[i].latitude, data[i].longitude),
             map: map,
             title: data[i].common_name + " " + data[i].city_feature,
-            animation: google.maps.Animation.DROP,
+            // animation: google.maps.Animation.DROP,
             type: data[i].city_feature,
-            visible: true
           });
           markersArray.push(marker);
         }

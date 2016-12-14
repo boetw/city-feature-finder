@@ -6,15 +6,27 @@
     <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <link href='style.css' rel='stylesheet' type='text/css'>
+    <link href='about.css' rel='stylesheet' type='text/css'>
   </head>
   <body>
+  <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+<div id="infoText">
+          <h1 >Your interests mapped all in one place!</h1>
+          <p >What would you like to find today?</p>
+          <p><strong>With Groopie you can easily populate a map with all of your interests!</strong> Before Groopie you had to chart your own map. Individually having to either remember or create your own pins to find your varied interests in one spot. Now living in Seattle 2016, where the future is here. You no longer need to be a cartographer, because we’ll do all the dirty work for you. Want to find a park with basketball courts and wading pools? We got you. We’re the gang, and we look out for you.</p>
+        </div>
+</div>
     <div id="map"></div>
     <div class="contain">
-      <!-- <div class="infoText">
-        <h1 >Your interests mapped all in one place!</h1>
-        <p >What would you like to find today?</p>
-        <p><strong>With Groopie you can easily populate a map with all of your interests!</strong> Before Groopie you had to chart your own map. Individually having to either remember or create your own pins to find your varied interests in one spot. Now living in Seattle 2016, where the future is here. You no longer need to be a cartographer, because we’ll do all the dirty work for you. Want to find a park with basketball courts and wading pools? We got you. We’re the gang, and we look out for you.</p>
-      </div> -->
+      <!-- <div id= "aboutPanel">
+        <div id="infoText">
+          <h1 >Your interests mapped all in one place!</h1>
+          <p >What would you like to find today?</p>
+          <p><strong>With Groopie you can easily populate a map with all of your interests!</strong> Before Groopie you had to chart your own map. Individually having to either remember or create your own pins to find your varied interests in one spot. Now living in Seattle 2016, where the future is here. You no longer need to be a cartographer, because we’ll do all the dirty work for you. Want to find a park with basketball courts and wading pools? We got you. We’re the gang, and we look out for you.</p>
+        </div>
+        <div id="about">About Page</div>
+      </div> --><span onclick="openNav()">About</span>
       <div  id="menu">
         <div id="select">Select What You Are Looking For</div>
         <div class="selectPlace" id="Off Leash Areas" value="Off Leash Areas">Off Leash Dog Areas</div>
@@ -38,5 +50,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrKLAeSAy-OljbVm_R3CwqGFT_uFPhOmQ"></script>
     <script src="app.js"></script>
+    <script src="about.js"></script>
   </body>
 </html>
