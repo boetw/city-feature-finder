@@ -2,7 +2,7 @@ $(document).ready(function() {
   // Intialize our map
   var center = new google.maps.LatLng(47.607417, -122.335864);
   var mapOptions = {
-    zoom: 16,
+    zoom: 14,
     center: center,
     draggable: true
   };
